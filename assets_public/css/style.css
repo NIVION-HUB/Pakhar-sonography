@@ -1494,3 +1494,24 @@ footer a:hover {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+/* --- PASTE AT THE BOTTOM OF CSS --- */
+
+#hero::after {
+  /* Vertical only, smooth latency */
+  animation: up-down-shake 6s ease-in-out infinite;
+}
+
+@keyframes up-down-shake {
+  0% {
+    /* Start position */
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    /* Move Down 20px */
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    /* Return to start */
+    transform: translateX(-50%) translateY(0);
+  }
+}
